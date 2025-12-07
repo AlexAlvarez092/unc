@@ -1,24 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <title>UNC</title>
-  <style>
-    body {
-      margin:0;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      height:100vh;
-      background:#000;
-    }
-    img {
-      max-width:100%;
-      max-height:100%;
-    }
-  </style>
-</head>
-<body>
-  <img src="cuatro-gatos.jpeg" alt="Sois cuatro gatos">
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <title>UNC</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="stage" id="stage">
+            <img src="cuatro-gatos.jpeg" alt="Sois cuatro gatos" id="cover" />
+            <video id="video" class="hidden" preload="metadata" playsinline>
+                <source src="cuatro-gatos.mp4" type="video/mp4" />
+                Tu navegador no soporta video.
+            </video>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
