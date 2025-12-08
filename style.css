@@ -2,24 +2,54 @@ body {
     margin: 0;
     min-height: 100dvh;
     background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .stage {
     position: relative;
-    width: 100vw;
-    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     background: #000;
     touch-action: manipulation;
 }
 
+/* Portrait (vertical) mobile: width 100%, dynamic height */
+@media (orientation: portrait) {
+    .stage {
+        width: 100vw;
+        height: auto;
+    }
+
+    .stage img,
+    .stage video {
+        width: 100vw;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+/* Landscape (horizontal) mobile and PC: height 100%, dynamic width */
+@media (orientation: landscape) {
+    .stage {
+        width: auto;
+        height: 100dvh;
+    }
+
+    .stage img,
+    .stage video {
+        width: auto;
+        height: 100dvh;
+        object-fit: contain;
+    }
+}
+
 .stage img,
 .stage video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    display: block;
     background: #000;
 }
 
